@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Codereview | Newsletter Sign-Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300|Josefin+Slab:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- CONTAINER START -->
+    <div class="container">
+      <header class="page-header">
+        <h1 class="logo">The Code Review</h1>
+      </header>
+      <section class="info-section page_pad">
+        <h2>Signup for our newsletter</h2>
+        <p>Get the latest news on how your code is doing right in your inbox</p>
+      </section>
+
+      <!-- FORM SECTION START -->
+      <section class="form-section page_pad">
+
+        <h2 class="hide">Sign Up Form</h2>
+
+        <form action="index.html" method="post">
+
+          <!-- CONTACT FIELDSET START -->
+          <fieldset>
+
+            <legend>Contact Information</legend>
+
+            <!-- NAME -->
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" placeholder="Required" required autofocus>
+
+              <!-- EMAIL -->
+            <label for="full_name">Email Address</label>
+            <input type="email" id="mail" name="email_add" placeholder="Required" required>
+
+            <!-- NUMBER -->
+            <label for="phone_number">Phone Number</label>
+            <input type="tel" id="phone_number" name="phone_number">
+
+            <!-- DOB -->
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob">
+
+            <!-- STREET -->
+            <label for="street_address">Street Address</label>
+            <input type="text" id="street_address" name="street_address" placeholder="Include Door Number">
+
+            <!-- CITY -->
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+
+            <!-- EMIRATE -->
+            <label for="emirate">Emirate</label>
+            <select id="emirate" name="user_emirate">
+              <option value="" disabled selected hidden>Select Emirate</option>
+              <optgroup label="Southern Emirates">
+                <option value="abu_dhabi">Abu Dhabi</option>
+                <option value="al_ain">Al Ain</option>
+              </optgroup>
+              <optgroup label="Northern Emirates">
+                <option value="ajman">Ajman</option>
+                <option value="dubai">Dubai</option>
+                <option value="fujairah">Fujairah</option>
+                <option value="rak">Ras al-Khaimah</option>
+                <option value="sharjah">Sharjah</option>
+                <option value="uaq">Umm al-Quwain</option>
+              </optgroup>
+            </select>
+
+            <!-- ZIP CODE -->
+            <label for="zip_code">Zip Code</label>
+            <input type="text" id="zip_code" name="zip_code">
+
+          </fieldset>
+          <!-- CONTACT FIELDSET END -->
+
+          <!-- NEWSLETTER FIELDSET START -->
+          <fieldset>
+
+            <legend>Newsletter</legend>
+
+            <!-- NEWSLETTER TYPE -->
+            <label>Select the newsletters you would like to recieve</label>
+
+            <!-- HTML News -->
+            <input type="checkbox" id="html_news" value="html_news" name="newsletter_type">
+            <label for="html_news" class="custom-check">HTML News</label><br>
+
+            <!-- CSS News -->
+            <input type="checkbox" id="css_news" value="css_news" name="newsletter_type">
+            <label for="css_news" class="custom-check">CSS News</label><br>
+
+            <!-- JavaScript News -->
+            <input type="checkbox" id="javascript_news" value="javascript_news" name="newsletter_type">
+            <label for="javascript_news" class="custom-check">Javascript News</label>
+
+            <!-- NEWSLETTER FORMAT -->
+            <label class="news-form">Newsletter format</label>
+
+            <!-- HTML -->
+            <input type="radio" class="inln" id="html_format" value="html_format" name="news_format"><label for="html_format" class="custom_radio">HTML</label><br>
+
+            <!-- Plain Text -->
+            <input type="radio" class="inln" id="plain_text" value="plain_text" name="news_format"><label for="plain_text" class="custom_radio">Plain Text</label>
+
+            <!-- OTHER TOPICS -->
+            <label for="other_topics">Other topics you'd like to hear about</label>
+            <textarea id="other_topics" name="other_topics"></textarea>
+
+          </fieldset>
+          <!-- NEWSLETTER FIELDSET END -->
+
+          <div class="button-wrap">
+            <button type="submit">Sign Up</button>
+          </div>
+
+        </form>
+
+      </section>
+      <!-- FORM SECTION END -->
+
+      <footer class="page-footer">
+        <p>Copyright The Code Review</p>
+      </footer>
+
+    </div>
+    <!-- CONTAINER END -->
+  </body>
+</html>

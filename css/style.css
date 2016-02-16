@@ -1,0 +1,367 @@
+/******************************************
+  GENERAL PAGE LAYOUT
+*******************************************/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.page_pad {
+  margin-left: 0.875em;
+  margin-right: 0.875em;
+}
+
+
+
+/******************************************
+  FONTS & COLORS
+*******************************************/
+/* Mutiple/General *************************/
+body {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+}
+
+h1, h2, legend {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+}
+
+body, h2, legend {
+  color: #34495e;
+}
+
+/* Header *************************/
+.page-header {
+  background-color: #34495e;
+  box-shadow: 0 1px 2px rgba(52, 73, 94, 0.5);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+/* Info Section *************************/
+.info-section {
+  border-bottom: 4px solid #34495e;
+}
+
+.info-section p {
+  font-size: 0.875em;
+  color: #bdc3c7;
+}
+
+/* Form Section *************************/
+.form-section {
+  border-top: 2px solid #34495e;
+}
+
+/* Add a small border between the fieldsets */
+.form-section fieldset:first-child {
+  border-bottom: 2px solid #34495e;
+}
+
+legend {
+  font-size: 1.5em;
+}
+
+/* !!For form input styling & colors, see the Form Section in the document!! */
+
+
+/******************************************
+  HEADER LAYOUT & STYLES
+*******************************************/
+.page-header {
+  height: 60px;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+
+
+/******************************************
+  INFO SECTION LAYOUT & STYLES
+*******************************************/
+.info-section {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.info-section h2, .info-section p {
+  margin-bottom: 0;
+}
+
+.info-section p {
+  margin-top: 8px;
+}
+
+
+
+/******************************************
+  FORM SECTION LAYOUT & STYLES
+*******************************************/
+.form-section {
+  margin-top: 5px;
+  padding-top: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.form-section fieldset {
+  border: none;
+}
+
+fieldset:nth-child(2n) legend {
+  padding-top: 20px;
+}
+
+legend {
+  padding-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  background: rgba(236, 240, 241,1.0);
+  border: 2px solid rgba(236, 240, 241,1.0);
+  border-radius: 5px;
+  font-size: 0.75em;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  color: #8a97a0;
+  margin-bottom: 30px;
+  transition: border 1s ease;
+}
+
+textarea {
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus
+textarea:focus {
+  border: 2px solid #34495e;
+}
+
+/* Allow custom drop-down icon, meaning design consistency accross browsers */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select {
+  padding: 10px;
+  height: auto;
+  border-radius: 2px;
+  /* Adding custom dropdown button to select box*/
+  background: url(../images/down_arrow.png) no-repeat 95% rgba(236, 240, 241,1.0);
+}
+
+#zip_code {
+  width: 50%;
+}
+
+/* Spacing between input and label */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 20px 0;
+}
+
+/* Move label onto same line as input  */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  font-size: 0.875em;
+}
+
+/* CUSTOM CHECK BOX STYLES */
+/* Move check and radio off of the page. Display hidden not used, due to accessibility reason with screen readers */
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.custom-check,
+.custom_radio {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.custom-check::before, .custom-check::after,
+.custom_radio::before, .custom_radio::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input[type="checkbox"] + .custom-check::before,
+input[type="checkbox"] + .custom-check::after {
+  border-radius: 5px;
+}
+
+input[type="radio"] + .custom_radio::before,
+input[type="radio"] + .custom_radio::after {
+  border-radius: 50%;
+}
+
+.custom-check::before,
+.custom_radio::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(236, 240, 241,1.0);
+}
+
+.custom-check::before,
+.custom_radio::before {
+  border: 2px solid rgba(236, 240, 241,1.0)
+}
+
+input[type="checkbox"]:checked + .custom-check::before,
+input[type="radio"]:checked + .custom_radio::before {
+  border-color: #34495e;
+}
+
+.custom-check::after {
+  display: none;
+  content: '\2713 ';
+  font-weight: bold;
+  font-size: 1em;
+  width: 20px;
+  height: 20px;
+}
+
+.custom_radio::after {
+  display: none;
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  background: #34495e;
+}
+
+input[type="checkbox"]:checked + .custom-check::after,
+input[type="radio"]:checked + .custom_radio::after {
+  display: block;
+}
+
+.news-form {
+  padding-top: 20px;
+}
+
+label[for="other_topics"] {
+  padding-top: 20px;
+}
+
+textarea {
+  height: 8em;
+}
+
+.button-wrap {
+  padding: 0 10px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4ebbb5;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Place holder text right align */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  text-align: right;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  text-align: right;
+}
+:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+.page-footer {
+  text-align: center;
+  font-size: 0.875em;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .info-section,
+  .form-section {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info-section,
+  .form-section {
+    max-width: 800px;
+
+  }
+
+  #zip_code {
+    width: 25%;
+  }
+
+  select {
+    background: url(../images/down_arrow.png) no-repeat 99% rgba(236, 240, 241,1.0);
+  }
+}
